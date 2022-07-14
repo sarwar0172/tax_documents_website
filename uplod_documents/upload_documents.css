@@ -1,0 +1,324 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,400&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========
+    header
+============ */
+.up_doc_header {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgb(209, 202, 202);
+  color: #fff;
+}
+.up_doc_header_div1 {
+  display: grid;
+  place-items: center;
+  font-family: var(--Roboto_Condensed_font);
+}
+.up_doc_header_div1 > p {
+  margin: 0;
+}
+.up_doc_header_div2,
+.up_doc_header_div3,
+.up_doc_header_div4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.up_doc_header_div2 > p,
+.up_doc_header_div3 > p,
+.up_doc_header_div4 > p {
+  color: #fff;
+  margin: 0;
+}
+.up_doc_header_right_parent {
+  display: flex;
+  justify-content: center;
+}
+.up_doc_header_right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* =========
+    navbar
+=========== */
+.up_doc_navbar {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  position: fixed;
+  z-index: 4;
+  background-color: #fff;
+  width: 100%;
+}
+
+.up_doc_navbar_links {
+  font-size: 1rem;
+  padding: 0.7rem;
+  font-weight: 500;
+}
+.up_doc_navbar_links > ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+.up_doc_navbar_links li {
+  list-style: none;
+  padding: 0.7rem;
+}
+.up_doc_navbar_links li a {
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
+  display: block;
+}
+.up_doc_navbar_links li:hover {
+  animation: navbaranimation 1s;
+}
+@keyframes navbaranimation {
+  100% {
+    background-color: rgb(173, 166, 166);
+    border-radius: 10px;
+  }
+}
+
+.up_doc_navbar_links li a:hover {
+  color: #fff;
+}
+
+.toggle_button {
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle_button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: rgb(15, 116, 202);
+  border-radius: 10px;
+}
+.li_1:hover:after {
+  content: '';
+  border-top: 1px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-left: 80px solid #fff;
+  position: absolute;
+}
+.li_2:hover:after {
+  content: '';
+  border-top: 1px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-left: 85px solid #fff;
+  position: absolute;
+}
+.li_3:hover:after {
+  content: '';
+  border-top: 1px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-left: 110px solid #fff;
+  position: absolute;
+}
+.li_4:hover:after {
+  content: '';
+  border-top: 1px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-left: 175px solid #fff;
+  position: absolute;
+}
+.li_5:hover:after {
+  content: '';
+  border-top: 1px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-left: 200px solid #fff;
+  position: absolute;
+}
+.li_6:hover:after {
+  content: '';
+  border-top: 1px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-left: 135px solid #fff;
+  position: absolute;
+}
+.navbarscroll {
+  top: 0;
+}
+.up_doc_navbar_title img {
+  max-width: 15rem;
+}
+
+/* =========
+ section 1
+ ======== */
+.up_doc_section1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.up_doc_section1::before {
+  content: '';
+  background-image: url(./img/up_doc_s1_img1.jpg);
+  background-size: cover;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  filter: brightness(60%);
+}
+.up_doc_section1 h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 4rem);
+  text-align: center;
+}
+/* ======
+ section2
+ ======= */
+ .up_doc_section2{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    padding: 2rem 4rem;
+ } 
+
+ .up_doc_section2 form input{
+    min-height: 2.3rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border: 1.5px solid #719ECE;
+    border-radius: 5px;
+
+ }
+
+ .up_doc_section2 form input:focus{
+   outline: none;
+   animation:bacgroudColor 1s;
+   animation-fill-mode: forwards;
+ }
+ @keyframes bacgroudColor {
+  100%{
+    background-color: rgb(233, 245, 252);
+  }
+ }
+ .up_doc_section2 form .f_name,.up_doc_section2 form .L_name{
+    min-width: 20rem;
+    width: 50%; 
+ }
+.up_doc_section2 form .address{
+   min-width: 20rem;
+   width: 50%;  
+}
+.up_doc_section2 form .phone{
+    min-width: 17rem;
+   
+}
+.up_doc_section2 form .email{
+  min-width: 17rem;
+
+}
+.up_doc_section2 form .marital_status{
+  display: flex;
+  gap: .5rem;
+}
+.up_doc_section2 form .marital_status label{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.up_doc_section2 form a{
+  padding: .7rem 2rem;
+  font-size:1.2rem;
+  border: 2px solid rgba(0, 0, 0, 0.233);
+}
+.up_doc_section2 form a:hover{
+  animation: s2bacgroud .5s;
+  animation-fill-mode: forwards;
+  box-shadow: none;
+  cursor: pointer;
+}
+@keyframes s2bacgroud {
+   100%{background-color: rgba(0, 0, 0, 0.507);
+    color: #fff;
+  }
+}
+/* ======================================================================================
+                                      responsive
+========================================================================================*/
+
+/*========= large device====== */
+@media screen and (max-width: 1024px) {
+  /* nav */
+  .toggle_button {
+    display: flex;
+    top: 3rem;
+  }
+
+  .up_doc_navbar_links {
+    display: none;
+    width: 100%;
+    background-color: black;
+    position: relative;
+  }
+
+  .up_doc_navbar {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .up_doc_navbar_links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .up_doc_navbar_links li {
+    text-align: center;
+  }
+  .up_doc_navbar_links li::after {
+    display: none;
+  }
+  .up_doc_navbar_links.active {
+    display: flex;
+  }
+
+  .up_doc_navbar_links li a {
+    color: #fff;
+  }
+  .up_doc_navbar_links li a:hover {
+    color: black;
+  }
+  .up_doc_navbar_links li:hover {
+    background-color: rgb(209, 137, 30);
+  }
+}
+
+/* =======medium device=========== */
+@media screen and (max-width: 766px) {
+  /*===========
+   header section 
+   ===========*/
+  .up_doc_header {
+    flex-direction: column;
+  }
+}

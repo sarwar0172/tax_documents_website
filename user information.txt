@@ -1,0 +1,5 @@
+ demao site= https://paragonafs.ca/
+
+cpanel=https://samplecdr.com:2083/
+id= samplecd
+pass=eDownload@1980
